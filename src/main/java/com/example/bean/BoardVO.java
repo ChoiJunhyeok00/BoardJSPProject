@@ -2,13 +2,14 @@ package com.example.bean;
 
 import java.util.Date;
 
-public class BoardVO {
+public class BoardVO { //value object
     private int seq;
     private String category;
     private String title;
     private String writer;
     private String content;
     private Date regdate;
+    private Date editdate;
     private int cnt;
 
     public int getSeq() {
