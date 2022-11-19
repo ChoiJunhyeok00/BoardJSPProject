@@ -22,7 +22,7 @@
     BoardVO u = boardDAO.getBoard(Integer.parseInt(id));
     request.setAttribute("vo", u);
 %>
-<h1>회원 정보 보기</h1>
+<h1>게시글 보기</h1>
 <table id="edit">
     <tr>
         <td>Id</td> <td>${vo.getSeq()}</td>
@@ -34,11 +34,14 @@
         <td>Title</td><td>${vo.getTitle()}</td>
     </tr>
     <tr>
-        <td>Photo</td><td><c:if test="${vo.getFile() ne ''}"><br />
-        <img src="${pageContext.request.contextPath }/upload/${vo.getFile()}" class="file"></c:if></td>
+        <td>Writer</td><td>${vo.getWriter()}</td>
     </tr>
     <tr>
-        <td>Writer</td><td>${vo.getWriter()}</td>
+        <td>Content</td><td>${vo.getContent()}</td>
+    </tr>
+    <tr>
+        <td>Photo</td><td><c:if test="${vo.getFile() ne ''}"><br />
+        <img src="${pageContext.request.contextPath }/upload/${vo.getFile()}" class="file"></c:if></td>
     </tr>
 </table>
 <button type="button" onclick="history.back()">뒤로 가기</button>
