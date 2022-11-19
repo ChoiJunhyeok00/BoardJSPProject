@@ -10,6 +10,7 @@ public class BoardVO { //value object
     private String content;
     private Date regdate;
     private Date editdate;
+    private String file;
     private int cnt;
 
     public int getSeq() {
@@ -55,4 +56,21 @@ public class BoardVO { //value object
     public void setCategory(String category) {
         this.category = category;
     }
+    public Date getEditdate() {
+        return editdate;
+    }
+
+    public void setEditdate(Date editdate) {
+        this.editdate = editdate;
+    }
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+
 }
